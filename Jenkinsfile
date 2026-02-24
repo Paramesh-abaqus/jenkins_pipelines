@@ -6,6 +6,7 @@ pipeline {
             agent {label "slave1"}
             steps{
                 sh "echo 'build_stage_1'"
+                sh ''' sleep 10'''
             }
         }
 
@@ -16,7 +17,7 @@ pipeline {
                  sh ''' ls -lrt
                 pwd
                 env
-                
+
                 sleep 10
                 '''
             }

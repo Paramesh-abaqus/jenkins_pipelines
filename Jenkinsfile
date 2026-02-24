@@ -50,6 +50,7 @@ pipeline {
                         sh ''' ls -lrt
                 pwd
                sleep 2
+               exit 1
                 '''
                     }
                 }

@@ -26,6 +26,12 @@ pipeline {
 
 
     stages{
+
+
+       
+
+
+
         stage("git_checkout"){
           //  agent {label "slave1"}
             steps{
@@ -33,6 +39,9 @@ pipeline {
             }
         }
 
+        stage("parallel Stages"){
+            parallel{
+        }
          stage("git_list files"){
           //  agent {label "slave1"}
             steps{
@@ -78,6 +87,7 @@ pipeline {
                sleep 2
                 '''
             }
+        }
         }
     }
 }

@@ -15,7 +15,9 @@ pipeline {
                 sh "echo 'build_stage_2'"
                  sh ''' ls -lrt
                 pwd
-                evn '''
+                ${evn}
+                sleep 10
+                '''
             }
         }
     }

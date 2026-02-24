@@ -38,7 +38,7 @@ pipeline {
             steps{
                 sh ''' ls -lrt
                 pwd
-               sleep 10
+               sleep 2
                 '''
             }
         }
@@ -48,7 +48,7 @@ pipeline {
             steps{
                 sh ''' ls -lrt
                 pwd
-               sleep 10
+               sleep 2
                 '''
             }
         }
@@ -65,7 +65,7 @@ pipeline {
             steps{
                 sh ''' ls -lrt
                 pwd
-               sleep 10
+               sleep 2
                 '''
             }
         }
@@ -75,7 +75,7 @@ pipeline {
             steps{
                 sh ''' ls -lrt
                 pwd
-               sleep 10
+               sleep 2
                 '''
             }
         }

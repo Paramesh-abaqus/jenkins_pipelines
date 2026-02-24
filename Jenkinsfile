@@ -13,9 +13,9 @@ pipeline {
             agent {label "slave2"}
             steps{
                 sh "echo 'build_stage_2'"
-                ''' sh ls -lrt
+                 sh ''' ls -lrt
                 pwd
-                evn ''
+                evn '''
             }
         }
     }

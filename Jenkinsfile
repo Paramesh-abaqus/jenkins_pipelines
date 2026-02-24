@@ -16,7 +16,7 @@ pipeline {
                  sh ''' ls -lrt
                 pwd
                 ${evn}
-                sleep 10
+                sleep 10git s
                 '''
             }
         }

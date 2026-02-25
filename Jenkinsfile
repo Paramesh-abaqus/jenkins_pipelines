@@ -38,8 +38,6 @@ pipeline {
             }
         }
 
-        
-
         stage('parallel Stages') {
             parallel {
                 stage('git_list files') {
@@ -61,7 +59,6 @@ pipeline {
                         sh ''' ls -lrt
                 pwd
                sleep 2
-               exit 1
                 '''
                     }
                 }

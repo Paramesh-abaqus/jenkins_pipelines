@@ -34,9 +34,11 @@ pipeline {
         stage('git_checkout') {
             //  agent {label "slave1"}
             steps {
-                git branch: ${ env.BRANCH_NAME }, credentialsId: ${ env.CREDENTIALS_ID }, url: ${ env.GIT_URL }
+                git branch: "${ env.BRANCH_NAME }", credentialsId: "${ env.CREDENTIALS_ID }", url: "${ env.GIT_URL }"
             }
         }
+
+        
 
         stage('parallel Stages') {
             parallel {

@@ -24,11 +24,17 @@ pipeline {
         }
     } */
 
+    environment {
+        GIT_URL = 'https://github.com/Paramesh-abaqus/jenkins_pipelines.git'
+        CREDENTIALS_ID = 'param-github'
+        BRANCH_NAME = 'main'
+    }
+
     stages {
         stage('git_checkout') {
             //  agent {label "slave1"}
             steps {
-                git branch: 'main', credentialsId: 'param-github', url: 'https://github.com/Paramesh-abaqus/jenkins_pipelines.git'
+                git branch: ${ env.BRANCH_NAME }, credentialsId: ${ env.CREDENTIALS_ID }, url: ${ env.GIT_URL }
             }
         }
 
@@ -37,7 +43,10 @@ pipeline {
                 stage('git_list files') {
                     //  agent {label "slave1"}
                     steps {
-                        sh ''' ls -lrt
+                        sh ''' echo "Branch Name ${BRANCH_NAME}"
+                        echo "Branch Name ${CREDENTIALS_ID}"
+                        echo "Branch Name ${GIT_URL}"
+
                 pwd
                sleep 2
                 '''
@@ -82,7 +91,6 @@ pipeline {
                     }
                 }
             }
-        
         }
     }
 }
